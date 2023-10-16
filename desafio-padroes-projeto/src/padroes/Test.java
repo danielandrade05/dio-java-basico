@@ -3,6 +3,7 @@ package padroes;
 import padroes.singleton.*;
 import padroes.strategy.*;
 import padroes.facade.*;
+import padroes.factory.*;
 
 public class Test {
   public static void main(String[] args) {
@@ -50,5 +51,16 @@ public class Test {
 
     Facade facade = new Facade();
     facade.migrarCliente("Daniel", "2023000");
+
+    // Factory
+    System.out.println("\nTestes Factory: \n");
+    Cedula cedulaUmReal = FabricaCedulas.getCedula("um");
+    System.out.println(cedulaUmReal.getDescricao());
+
+    Cedula cedulaDoisReais = FabricaCedulas.getCedula("2");
+    System.out.println(cedulaDoisReais.getDescricao());
+
+    Cedula cedulaCincoReais = FabricaCedulas.getCedula("cinco");
+    System.out.println(cedulaCincoReais.getDescricao());
   }
 }
