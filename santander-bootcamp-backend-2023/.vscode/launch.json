@@ -6,7 +6,21 @@
   "configurations": [
     {
       "type": "java",
-      "name": "Current File",
+      "name": "prd",
+      "request": "launch",
+      "mainClass": "${file}",
+      "env": {
+        "SPRING_PROFILES_ACTIVE": "prd",
+        "PGDATABASE": "railway",
+        "PGHOST": "containers-us-west-166.railway.app",
+        "PGPASSWORD": "c7OnBBL2k01VqrZMZ4qk",
+        "PGPORT": "7322",
+        "PGUSER": "postgres"
+      }
+    },
+    {
+      "type": "java",
+      "name": "dev",
       "request": "launch",
       "mainClass": "${file}",
       "env": {
